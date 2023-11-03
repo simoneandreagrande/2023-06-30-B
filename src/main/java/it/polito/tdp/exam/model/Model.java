@@ -40,7 +40,7 @@ public class Model {
 		Graphs.addAllVertices(this.grafo, vertici) ;
 		
 		
-		 //Leggere i giocatori per ogni anno
+		 //Leggere i giocatori per ogni anno e per ogni squadra
         this.annoToPlayers.clear();
         for (int anno : vertici) {
             this.annoToPlayers.put(anno, this.dao.getPlayersSalaryTeamYear(name, anno));
@@ -92,6 +92,8 @@ public class Model {
 		// aggiungo a dettaglio anno e peso associati
 	    for(Integer nodo : adiacenti) {
 	        DefaultWeightedEdge arco = this.grafo.getEdge(anno, nodo);
+	        // evitare il problema della notazione esponenziale
+	        // che puà creare problemi con l'ordine crescente/decrescente degli output
 	        double peso = this.grafo.getEdgeWeight(arco);
 	        result.add(new Dettaglio(nodo, (int) peso)); // Aggiunge il peso come intero a Dettaglio
 	    }

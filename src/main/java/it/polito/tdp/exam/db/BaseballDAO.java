@@ -250,5 +250,7 @@ public class BaseballDAO {
 			throw new RuntimeException("Error Connection Database");
 		}
 	}
+
+	
 	
 }

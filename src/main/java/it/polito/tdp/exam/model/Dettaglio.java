@@ -6,6 +6,7 @@ public class Dettaglio implements Comparable<Dettaglio> {
 	
 	private Integer anno;
 	private Integer peso;
+	
 	public Integer getAnno() {
 		return anno;
 	}
@@ -35,7 +36,7 @@ public class Dettaglio implements Comparable<Dettaglio> {
 	}
 	@Override
 	public String toString() {
-		return "Dettaglio [anno=" + anno + ", peso=" + peso + "]";
+		return "anno: " + anno + ", peso: " + peso + "]";
 	}
 	public Dettaglio(Integer anno, Integer peso) {
 		super();
