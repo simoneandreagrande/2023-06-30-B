@@ -40,7 +40,7 @@ public class Model {
 		Graphs.addAllVertices(this.grafo, vertici) ;
 		
 		
-		 //Leggere i giocatori per ogni anno e per ogni squadra
+		 //Leggere i giocatori per ogni anno e per ogni squadra e aggiungerli alla mappa
         this.annoToPlayers.clear();
         for (int anno : vertici) {
             this.annoToPlayers.put(anno, this.dao.getPlayersSalaryTeamYear(name, anno));
